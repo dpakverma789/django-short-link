@@ -1,0 +1,127 @@
+{% extends 'url_shortener/base.html' %}
+
+{% block title %}
+<title>LittleURL | URL Shortener</title>
+{% endblock %}
+
+{% block container %}
+
+<div class="container">
+
+    <div class="hero">
+
+        <div class="logo">
+            🔗
+        </div>
+
+        <h1>LittleURL</h1>
+
+        <p>
+            Transform long URLs into clean, shareable links in seconds.
+        </p>
+
+    </div>
+
+
+    <form method="POST" autocomplete="off">
+
+        {% csrf_token %}
+
+        {% if form_errors %}
+        <div class="error-messages">
+            {% for field, errors in form_errors.items %}
+                {% for error in errors %}
+                    <div class="error-message">{{ error }}</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="input-group">
+
+            {{ form.original_url }}
+
+        </div>
+
+        <button
+            class="primary-btn"
+            type="submit"
+        >
+            Shorten URL
+        </button>
+
+    </form>
+
+
+    {% if short_url %}
+
+    <div class="result-card">
+
+        <div class="success">
+
+            <span class="success-icon">✓</span>
+
+            <div>
+
+                <h3>Your link is ready</h3>
+
+                <p>You can copy it or open it in a new tab.</p>
+
+            </div>
+
+        </div>
+
+        {% if qr_code %}
+        <div class="qr-code-container">
+            <img src="{{ qr_code }}" alt="QR Code" class="qr-code">
+        </div>
+        {% endif %}
+
+        <div class="short-url-box">
+
+            <input
+                id="short_url"
+                type="text"
+                readonly
+                value="{{ short_url }}"
+            >
+
+            <button
+                type="button"
+                id="copy-btn"
+                class="copy-btn"
+                onclick="copyurl()"
+            >
+                📋
+            </button>
+
+        </div>
+
+
+        <div class="actions">
+
+            <a
+                class="visit-link"
+                href="{{ short_url }}"
+                target="_blank"
+            >
+                Open Link ↗
+            </a>
+
+            <button
+                type="button"
+                class="secondary-btn"
+                onclick="window.location.replace(window.location.pathname)"
+            >
+                Shorten Another
+            </button>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,435 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+
+/* ===========================
+   Layout
+=========================== */
+
+.container{
+    width:min(90%,600px);
+    margin:70px auto;
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:24px;
+    padding:45px;
+    box-shadow: 0 10px 40px rgba(15,23,42,.08);
+}
+
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.logo{
+    font-size:55px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#0f172a;
+}
+
+.hero p{
+    color:#64748b;
+    font-size:16px;
+    line-height:1.6;
+}
+
+
+/* ===========================
+   Form
+=========================== */
+
+form{
+    margin-top:35px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group input{
+
+    width:100%;
+    height:58px;
+    padding:0 20px;
+    border:1px solid #cbd5e1;
+    border-radius:14px;
+    font-size:16px;
+    transition:.25s;
+}
+
+.input-group input:focus{
+
+    outline:none;
+    border-color:#2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+
+/* ===========================
+   Error Messages
+=========================== */
+
+.error-messages{
+
+    margin-bottom:20px;
+
+}
+
+.error-message{
+
+    background:#fef2f2;
+    color:#dc2626;
+    padding:12px 16px;
+    border-radius:8px;
+    border:1px solid #fecaca;
+    font-size:14px;
+    margin-bottom:8px;
+
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+.primary-btn{
+
+    width:100%;
+    height:56px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.primary-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+
+.secondary-btn{
+
+    border:none;
+
+    background:#f1f5f9;
+
+    color:#334155;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#e2e8f0;
+
+}
+
+
+/* ===========================
+   Result Card
+=========================== */
+
+.result-card{
+
+    margin-top:35px;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    background:#f8fafc;
+
+}
+
+
+.success{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+    margin-bottom:20px;
+
+}
+
+.success-icon{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#dcfce7;
+
+    color:#16a34a;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+}
+
+.success h3{
+
+    font-size:20px;
+
+    margin-bottom:6px;
+
+}
+
+.success p{
+
+    color:#64748b;
+
+}
+
+
+/* ===========================
+   QR Code
+=========================== */
+
+.qr-code-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:20px 0;
+
+    padding:20px;
+
+    background:white;
+
+    border-radius:12px;
+
+    border:1px solid #e2e8f0;
+
+}
+
+.qr-code{
+
+    max-width:200px;
+
+    height:auto;
+
+    border-radius:8px;
+
+}
+
+
+/* ===========================
+   URL Box
+=========================== */
+
+.short-url-box{
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:white;
+
+}
+
+.short-url-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    padding:16px 18px;
+
+    font-size:15px;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+
+.copy-btn{
+
+    width:60px;
+
+    height:54px;
+
+    border:none;
+
+    border-left:1px solid #e2e8f0;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+.copy-btn:hover{
+
+    background:#eff6ff;
+
+}
+
+
+/* ===========================
+   Bottom Actions
+=========================== */
+
+.actions{
+
+    margin-top:22px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.visit-link{
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.visit-link:hover{
+
+    color:#1d4ed8;
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:640px){
+
+    .container{
+
+        width:95%;
+
+        padding:28px;
+
+        margin:30px auto;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .visit-link{
+
+        text-align:center;
+
+    }
+
+    .secondary-btn{
+
+        width:100%;
+
+    }
+
+}
